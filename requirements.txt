@@ -1,0 +1,21 @@
+asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1605523041333/work
+certifi==2020.12.5
+cycler==0.10.0
+Django @ file:///home/conda/feedstock_root/build_artifacts/django_1606808783925/work
+kiwisolver @ file:///home/conda/feedstock_root/build_artifacts/kiwisolver_1604322295622/work
+matplotlib @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-suite_1605180228501/work
+numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1604945996350/work
+olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
+pandas==1.1.5
+patsy==0.5.1
+Pillow @ file:///home/conda/feedstock_root/build_artifacts/pillow_1604748700719/work
+pyparsing==2.4.7
+python-dateutil==2.8.1
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1604321279890/work
+scipy @ file:///home/conda/feedstock_root/build_artifacts/scipy_1604304779838/work
+seaborn @ file:///home/conda/feedstock_root/build_artifacts/seaborn-base_1604238753550/work
+sip==4.19.24
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
+sqlparse @ file:///home/conda/feedstock_root/build_artifacts/sqlparse_1602142927465/work
+statsmodels @ file:///home/conda/feedstock_root/build_artifacts/statsmodels_1604226979839/work
+tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1604105045397/work
