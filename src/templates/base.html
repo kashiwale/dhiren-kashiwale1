@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
   
-    <title>DJ PD PROJ {% block title %}{% endblock title %}</title>
+    <title>DJ PD PROJ - {% block title %}{% endblock title %}</title>
   
 <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
@@ -32,12 +32,13 @@
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
 </head>
-  <body>
-    {% include 'navbar.html' %}
-    <div class='ui container'>
-    {% block content %}
-    {% endblock content %}
-    </div>
-    <script src={% static 'main.js' %}></script>
-  </body>
+<body>
+  {% include 'navbar.html' %}
+  <div class='ui container'>
+  {% block content %}
+  {% endblock content %}
+  </div>
+
+  <script src={% static 'main.js' %}></script>
+</body>
 </html>
