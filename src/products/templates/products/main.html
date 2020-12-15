@@ -3,9 +3,25 @@
 {% block title %}performance{% endblock title %}
 
 {% block content %}
-
-
-
+<div class="ui modal mymodel">
+    <div class="header">Price data</div>
+    <div class="ui container">
+        <ul>
+            <li><strong>Count: </strong>{{ price.count }}</li>
+            <li><strong>Mean: </strong>{{ price.mean|floatformat }}</li>
+            <li><strong>Min: </strong>{{ price.min}}</li>
+            <li><strong>Max: </strong>{{ price.max }}</li>
+            <li><strong>Median: </strong>{{ price.median }}</li>
+            <li><strong>Std Dev: </strong>{{ price.std|floatformat }}</li>
+        </ul>
+    </div>
+  </div>
+<!--
+{{ price.mean|floatformat }}<br>
+{{ price.max }}<br>
+{{ price.count }}<br>
+{{ price.std|floatformat }}<br>
+-->
 <div>
     {% if error_message %}
     <div class="ui negative message">
@@ -53,5 +69,6 @@
         </div>
         <button class='ui primary button' type='submit'>Select</button>
     </form>
+    <button class='ui secondary button' id='model-btn'>See Summary</button>
 </div>
 {% endblock content %}

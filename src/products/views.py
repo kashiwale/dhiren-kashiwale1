@@ -9,6 +9,7 @@ def chart_select_view(request):
     graph = None
     error_message = None
     df = None
+    price = None
 
     product_df = pd.DataFrame(Product.objects.all().values())
     purchase_df = pd.DataFrame(Purchase.objects.all().values())
@@ -17,6 +18,7 @@ def chart_select_view(request):
     if purchase_df.shape[0] > 0:
 
         df = pd.merge(purchase_df, product_df, on='product_id').drop(['id_y','date_y'], axis=1).rename({'id_x': 'id', 'date_x': 'date'},axis = 1)
+        price = df['price']
         #print(df['date'][0])
         #print(type(df['date'][0]))
         if request.method == 'POST':
@@ -47,6 +49,7 @@ def chart_select_view(request):
         
 
     context = {
+        'price' : price,
         'graph' : graph,
         'error_message': error_message,
 
