@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="ui modal mymodel">
-    <div class="header">Price data</div>
+    <div class="header"><h1>Price data</h1></div>
     <div class="ui container">
         <ul>
             <li><strong>Count: </strong>{{ price.count }}</li>
@@ -23,23 +23,25 @@
 {{ price.std|floatformat }}<br>
 -->
 <div>
-    {% if error_message %}
-    <div class="ui negative message">
-        <i class="close icon"></i>
-        <div class="header">
-            {{ error_message }}
+    <div class="block-center">
+        {% if error_message %}
+        <div class="ui negative message">
+            <i class="close icon"></i>
+            <div class="header">
+                {{ error_message }}
+            </div>
         </div>
-         </div>
 
 
-           
-    {% endif %}
+            
+        {% endif %}
 
-    {% if request.POST %}
-        {% if graph %}
-            <img src="data:image/png;base64,{{ graph | safe}}">
+        {% if request.POST %}
+            {% if graph %}
+                <img src="data:image/png;base64,{{ graph | safe}}">
+            {% endif%}
         {% endif%}
-    {% endif%}
+    </div>
     <form action="" method="POST" class="ui form">
         {% csrf_token %}
         <div class="field">
@@ -67,8 +69,14 @@
               </div>
             </div>
         </div>
-        <button class='ui primary button' type='submit'>Select</button>
+        <div class="block-center">
+            <button class='ui primary button' type='submit'>Select</button>
+        </div>
     </form>
-    <button class='ui secondary button' id='model-btn'>See Summary</button>
+    <div class="block-center">
+        <button class='ui secondary button' id='model-btn'>See Summary</button>
+        <br>
+        <button class='ui positive button'>Add records</button>
+    </div>
 </div>
 {% endblock content %}
