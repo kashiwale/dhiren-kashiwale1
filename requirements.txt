@@ -29,4 +29,5 @@ toml==0.10.2
 tornado==6.1
 wheel==0.36.1
 wrapt==1.11.2
+gunicorn>=19.0.0
 
