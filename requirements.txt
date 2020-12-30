@@ -21,7 +21,7 @@ pytz==2020.4
 scipy==1.5.3
 seaborn==0.11.0
 setuptools>=49.6
-sip==4.19.24
+sip>=4.19
 six==1.15.0
 sqlparse==0.4.1
 statsmodels==0.12.1
