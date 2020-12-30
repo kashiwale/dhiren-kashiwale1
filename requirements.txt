@@ -20,7 +20,7 @@ python-dateutil==2.8.1
 pytz==2020.4
 scipy==1.5.3
 seaborn==0.11.0
-setuptools==49.6.0.post20201009
+setuptools>=49.6
 sip==4.19.24
 six==1.15.0
 sqlparse==0.4.1
