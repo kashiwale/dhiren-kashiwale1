@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import django_heroku
 from pathlib import Path
 import os
 
@@ -58,14 +58,23 @@ ROOT_URLCONF = 'dj_pd.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR / 'templates')],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR / 'templates'),
+                os.path.join(BASE_DIR / 'csvs/templates'),
+                ],
+        #'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #'django.template.loaders.filesystem.Loader',
+                #'django.template.loaders.app_directories.Loader',
+                
+            ],
+           'loaders': [
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
             ],
         },
     },
@@ -137,3 +146,5 @@ STATIC_ROOT = os.path.join(os.path.dirname(
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(
     BASE_DIR), "static_cdn", "media_root")
+
+django_heroku.settings(locals())
