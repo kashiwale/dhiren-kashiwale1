@@ -1,5 +1,5 @@
 asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1605523041333/work
-certifi==2020.12.5
+certifi==2022.12.7
 cycler==0.10.0
 Django @ file:///home/conda/feedstock_root/build_artifacts/django_1606808783925/work
 kiwisolver @ file:///home/conda/feedstock_root/build_artifacts/kiwisolver_1604322295622/work
