@@ -52,3 +52,4 @@ Thumbs.db
 db.sqlite3
 __pycache__/
 venv/
+local.py
