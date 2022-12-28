@@ -20,7 +20,9 @@ def upload_file_view(request):
 
                 for row in reader:
                     #print(row)
-                    #row = " ".join(row)
+                    row = " ".join(row)
+                    row = row.replace(";", " ")
+                    row = row.split()
                     #print(row)
                     user = User.objects.get(id = row[3])   
                     #print(user)
@@ -30,7 +32,7 @@ def upload_file_view(request):
                         price = int(row[2]),
                         quantity =  int(row[1]), 
                         salesman = user,
-                        date = row[4],
+                        date = row[4]+" "+row[5]
                         ) 
 
 
@@ -49,3 +51,5 @@ def upload_file_view(request):
 
 
     return render(request, 'csvs/upload.html', context)
+
+

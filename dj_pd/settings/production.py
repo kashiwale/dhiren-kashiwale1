@@ -18,12 +18,12 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 	#'NAME': 'dj_pd',
-	'NAME': 'de7jcjpbkqene6',
+	#'NAME': 'XXXXXXXXXXXXXX',
         #'USER': 'admin',
-	'USER': 'hfqykgfumjflsn',
+	#'USER': 'XXXXXXXXXXXXXXX',
 	#'PASSWORD':'admin',
-        'PASSWORD': '92c49618f902b3690e4250b5655e4e575f89ebadcafd7a746199f650308762bc',
-        'HOST': 'ec2-3-230-122-20.compute-1.amazonaws.com',
+        #'PASSWORD': '################################################',
+        #'HOST': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
         'PORT': '5432',
     }
 }

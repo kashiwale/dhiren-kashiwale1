@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2f%b-8%8mt&+53j#j)bkc457qr7t)#x82-%vvd2t=fyy26283_'
+# SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
@@ -59,9 +59,10 @@ ROOT_URLCONF = 'dj_pd.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR / 'templates'),
-                os.path.join(BASE_DIR / 'csvs/templates'),
-                ],
+#        'DIRS': [os.path.join(BASE_DIR / 'templates'),
+#                os.path.join(BASE_DIR / 'csvs/templates'),
+#                ],
+        'DIRS':[],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,9 +122,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static_project')
+    os.path.join(BASE_DIR, 'static_project',BASE_DIR / 'static')
 ]
 STATIC_ROOT = os.path.join(os.path.dirname(
     BASE_DIR), "static_cdn", "static_root")
