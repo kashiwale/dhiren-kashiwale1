@@ -7,8 +7,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','dhiren-kashiwale.herokuapp.com']
 
-#SECRET_KEY = os.getenv('SECRET_KEY')
-SECRET_KEY = '2f%b-8%8mt&+53j#j)bkc457qr7t)#x82-%vvd2t=fyy26283_'
+SECRET_KEY = os.environ['SECRET_KEY']
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
