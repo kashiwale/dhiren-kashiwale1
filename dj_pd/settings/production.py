@@ -19,12 +19,12 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 	#'NAME': 'dj_pd',
-	'NAME': os.getenv('NAME'),
+	'NAME': os.environ['NAME'],
         #'USER': 'admin',
-	'USER': os.getenv('USER'),
+	'USER': os.environ['USER'],
 	#'PASSWORD':'admin',
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
+        'PASSWORD': os.environ['PASSWORD'],
+        'HOST': os.environ['HOST'],
         'PORT': '5432',
     }
 }
