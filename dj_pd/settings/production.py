@@ -7,7 +7,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','dhiren-kashiwale.herokuapp.com']
 
-
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
