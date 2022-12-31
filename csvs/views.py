@@ -17,7 +17,7 @@ def upload_file_view(request):
             obj = Csv.objects.get(activated=False)
             with open(obj.file_name.path, 'r') as f:
                 reader = csv.reader(f)
-
+                # print(f"All is well !!!! {reader}")
                 for row in reader:
                     #print(row)
                     row = " ".join(row)
