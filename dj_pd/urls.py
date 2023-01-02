@@ -25,8 +25,17 @@ urlpatterns = [
     path('performance/', include('products.urls', namespace='products')),
     path('upload/', include('csvs.urls', namespace='csvs')),
     path('customers/', include('customers.urls', namespace='customers')),
+    path('main/', include('main.urls', namespace='main')),
+    #path('home/', include('main.urls', namespace='main')),
+    # path('list/', include('main.urls', namespace='main')),
+    # path('listing/<str:id>/', include('main.urls', namespace='main')),
+    # path('listing/<str:id>/edit/', include('main.urls', namespace='main')),
+    # path('listing/<str:id>/like/', include('main.urls', namespace='main')),
+    # path('listing/<str:id>/inquire/',
+    #      include('main.urls', namespace='main')),
 
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
