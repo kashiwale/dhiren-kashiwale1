@@ -19,13 +19,18 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import home_view
 
+from main import urls as main_app_urls
+from users import urls as users_app_urls
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view,name='home' ),
     path('performance/', include('products.urls', namespace='products')),
     path('upload/', include('csvs.urls', namespace='csvs')),
     path('customers/', include('customers.urls', namespace='customers')),
-    path('main/', include('main.urls', namespace='main')),
+    path('', include(main_app_urls)),
+    path('', include(users_app_urls)),
+    # path('main/', include('main.urls', namespace='main')),
     #path('home/', include('main.urls', namespace='main')),
     # path('list/', include('main.urls', namespace='main')),
     # path('listing/<str:id>/', include('main.urls', namespace='main')),

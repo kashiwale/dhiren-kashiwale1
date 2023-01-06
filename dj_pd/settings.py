@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_heroku',
+    'crispy_forms',
     'products',
     'csvs',
     'customers',
@@ -189,6 +190,10 @@ AWS_ACCESS_KEY_ID=env('BUCKETEER_AWS_ACCESS_KEY_ID')
 
 # MEDIA_ROOT = os.path.join(os.path.dirname(
 #     BASE_DIR), "static_cdn", "media_root")
+
+#Django Crispy Form Settings
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 django_heroku.settings(locals())
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

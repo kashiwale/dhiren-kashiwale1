@@ -3,10 +3,10 @@ from django.urls import path
 
 from .views import main_view, home_view, list_view, listing_view, edit_view, like_listing_view, inquire_listing_using_email
 
-app_name = 'main'
+#app_name = 'main'
 
 urlpatterns = [
-    path('', main_view, name='main'),
+    path('main/', main_view, name='main'),
     path('home/', home_view, name='home'),
     path('list/', list_view, name='list'),
     path('listing/<str:id>/', listing_view, name='listing'),
