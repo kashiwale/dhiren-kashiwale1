@@ -54,4 +54,5 @@ __pycache__/
 venv/
 local.py
 dj_pd/.env
+.env
 
