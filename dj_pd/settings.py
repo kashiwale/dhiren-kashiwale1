@@ -157,8 +157,6 @@ USE_TZ = True
 
 
 
-<<<<<<< HEAD:dj_pd/settings/base.py
-=======
 STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
@@ -195,7 +193,6 @@ AWS_ACCESS_KEY_ID=env('BUCKETEER_AWS_ACCESS_KEY_ID')
 #Django Crispy Form Settings
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
->>>>>>> 2f0bd0bdc511dd30387b8147b0e43e7c8e9cc284:dj_pd/settings.py
 
 django_heroku.settings(locals())
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
